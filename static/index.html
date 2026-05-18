@@ -3,44 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BPDUNBOXED Companion</title>
+<title>BPDUNBOXED.BRO</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #1a0a2e; color: #f0e6ff; font-family: Georgia, serif; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-  .container { width: 100%; max-width: 680px; height: 100vh; display: flex; flex-direction: column; padding: 20px; }
-  h1 { text-align: center; color: #c084fc; font-size: 1.4rem; margin-bottom: 6px; }
-  .subtitle { text-align: center; color: #a78bca; font-size: 0.85rem; margin-bottom: 16px; }
-  .chat-box { flex: 1; overflow-y: auto; background: #120820; border-radius: 12px; padding: 20px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 14px; }
-  .message { max-width: 85%; padding: 12px 16px; border-radius: 16px; line-height: 1.6; font-size: 0.95rem; }
-  .user { background: #6d28d9; align-self: flex-end; border-bottom-right-radius: 4px; }
-  .bot { background: #2d1b4e; align-self: flex-start; border-bottom-left-radius: 4px; color: #e9d5ff; }
-  .input-row { display: flex; gap: 10px; }
-  textarea { flex: 1; background: #2d1b4e; border: 1px solid #6d28d9; color: #f0e6ff; border-radius: 10px; padding: 12px; font-size: 0.95rem; font-family: Georgia, serif; resize: none; height: 52px; }
-  textarea:focus { outline: none; border-color: #c084fc; }
-  button { background: #7c3aed; color: white; border: none; border-radius: 10px; padding: 0 20px; font-size: 1.1rem; cursor: pointer; }
-  button:hover { background: #6d28d9; }
-  .typing { color: #a78bca; font-style: italic; font-size: 0.85rem; align-self: flex-start; }
+
+  body {
+    background: #f0eded;
+    color: #2e2e2e;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 680px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px 20px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2e2e2e;
+    letter-spacing: 0.04em;
+  }
+
+  .subtitle {
+    color: #999;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: #e8b4bc;
+    margin: 10px auto 0;
+  }
+
+  .chat-box {
+    flex: 1;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .chat-box::-webkit-scrollbar { width: 4px; }
+  .chat-box::-webkit-scrollbar-thumb { background: #e8b4bc; border-radius: 4px; }
+
+  .message {
+    max-width: 82%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    line-height: 1.65;
+    font-size: 0.93rem;
+    font-weight: 400;
+  }
+
+  .user {
+    background: #e8b4bc;
+    color: #2e2e2e;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+
+  .bot {
+    background: #f5f5f5;
+    color: #2e2e2e;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+
+  .input-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  textarea {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    color: #2e2e2e;
+    border-radius: 12px;
+    padding: 13px 16px;
+    font-size: 0.93rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    resize: none;
+    height: 52px;
+    transition: border-color 0.2s;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: #e8b4bc;
+  }
+
+  textarea::placeholder { color: #bbb; }
+
+  button {
+    background: #e8b4bc;
+    color: #2e2e2e;
+    border: none;
+    border-radius: 12px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+
+  button:hover { background: #dfa0aa; }
+
+  .typing {
+    color: #bbb;
+    font-style: italic;
+    font-size: 0.82rem;
+    align-self: flex-start;
+    padding-left: 4px;
+  }
+
+  .safe-note {
+    text-align: center;
+    font-size: 0.72rem;
+    color: #bbb;
+    margin-top: 10px;
+    letter-spacing: 0.03em;
+  }
 </style>
 </head>
 <body>
 <div class="container">
-  <h1>💜 BPDUNBOXED Companion</h1>
-  <p class="subtitle">Peer support, not therapy. You're not alone.</p>
+  <div class="header">
+    <h1>BPDUNBOXED.BRO</h1>
+    <p class="subtitle">Peer support &nbsp;·&nbsp; Not therapy &nbsp;·&nbsp; You're not alone</p>
+    <div class="divider"></div>
+  </div>
   <div class="chat-box" id="chatBox"></div>
   <div class="input-row">
     <textarea id="userInput" placeholder="What's going on?" onkeydown="handleKey(event)"></textarea>
     <button onclick="sendMessage()">➤</button>
   </div>
+  <p class="safe-note">If you're in immediate danger, call or text 988</p>
 </div>
 <script>
   const chatBox = document.getElementById('chatBox');
   const userInput = document.getElementById('userInput');
   let messages = [];
-  let greeted = false;
 
-  window.onload = async () => {
-    await getBotGreeting();
-  };
+  window.onload = async () => { await getBotGreeting(); };
 
   async function getBotGreeting() {
     const typing = addTyping();
@@ -56,7 +191,6 @@
       const reply = data.response;
       messages.push({ role: "assistant", content: reply });
       addMessage(reply, 'bot');
-      greeted = true;
     } catch(e) {
       typing.remove();
       addMessage("Hey 💜 I'm here. What's going on?", 'bot');
@@ -111,3 +245,5 @@
     }
   }
 </script>
+</body>
+</html>
