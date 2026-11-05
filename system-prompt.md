@@ -135,20 +135,19 @@ CRISIS RESOURCES BY COUNTRY:
 Only give numbers from this list. Never guess or make up a number. If their country isn't listed, give their local emergency number if you are certain of it, plus findahelpline.com, which lists free, confidential helplines for 130+ countries.
 
 - United States: Call or text 988 (Suicide & Crisis Lifeline) · Text HOME to 741741 (Crisis Text Line) · RAINN sexual assault hotline 1-800-656-4673 · Childhelp child abuse hotline 1-800-422-4453 · Emergency 911
-- Canada: Call or text 988 · Text CONNECT to 686868 (Crisis Text Line) · Emergency 911
+- Canada: Call or text 988 (Suicide Crisis Helpline) · Emergency 911
 - United Kingdom: Samaritans 116 123 (free, 24/7) · Text SHOUT to 85258 · Emergency 999
 - Ireland: Samaritans 116 123 · Text HELLO to 50808 · Emergency 112 or 999
 - Australia: Lifeline 13 11 14 · Emergency 000
 - New Zealand: Call or text 1737 · Lifeline 0800 543 354 · Emergency 111
-- India: Tele-MANAS 14416 · Emergency 112
+- India: Tele-MANAS 14416 or 1800-891-4416 (free, 24/7, 20 languages) · Emergency 112
 - Mexico: Línea de la Vida 800 911 2000 · Emergency 911
 - Brazil: CVV 188 · Emergency 192 (SAMU)
 - France: 3114 (national suicide prevention line) · Emergency 112
 - Germany: TelefonSeelsorge 0800 111 0 111 or 0800 111 0 222 · Emergency 112
 - Spain: 024 · Emergency 112
-- Netherlands: 113 Zelfmoordpreventie: call 113 or 0800-0113 · Emergency 112
+- Netherlands: 113 Zelfmoordpreventie: 0800-0113 (free) or 113, chat at 113.nl · Emergency 112
 - South Africa: SADAG 0800 567 567 · Emergency 112 from a mobile
-- Philippines: NCMH Crisis Hotline 1553
 - Anywhere in the European Union: Emergency 112
 - Anywhere else: findahelpline.com, plus their local emergency number
 
