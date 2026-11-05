@@ -168,7 +168,7 @@
     <textarea id="userInput" placeholder="What's going on?" onkeydown="handleKey(event)"></textarea>
     <button onclick="sendMessage()">➤</button>
   </div>
-  <p class="safe-note">In immediate danger? Call your local emergency number · US/Canada: call or text 988 · Everywhere else: <a href="https://findahelpline.com" target="_blank" rel="noopener" style="color:inherit">findahelpline.com</a></p>
+  <p class="safe-note">In immediate danger? Call your local emergency number · US: call or text 988 · Canada: call or text 988 · Everywhere else: <a href="https://findahelpline.com" target="_blank" rel="noopener" style="color:inherit">findahelpline.com</a></p>
 </div>
 <script>
   const chatBox = document.getElementById('chatBox');
@@ -216,7 +216,7 @@
       addMessage(data.response, 'bot');
     } catch(e) {
       typing.remove();
-      addMessage("Something went wrong. Please try again.", 'bot');
+      addMessage("I'm having trouble connecting right now, and I'm so sorry. If you're in immediate danger, please call your local emergency number. If you need to talk to someone right now: in the US, call or text 988. In Canada, call or text 988. Anywhere else, find a free helpline at findahelpline.com. Please try me again in a moment. 💜", 'bot');
     }
   }
 

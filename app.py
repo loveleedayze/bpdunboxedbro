@@ -14,9 +14,10 @@ client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY
 
 FALLBACK = (
     "I'm having trouble connecting right now, and I'm so sorry. "
-    "If you're in immediate danger, please call your local emergency number, "
-    "call or text 988 in the US or Canada, or find a free helpline for your "
-    "country at findahelpline.com. Please try me again in a moment. 💜"
+    "If you're in immediate danger, please call your local emergency number. "
+    "If you need to talk to someone right now: in the US, call or text 988. "
+    "In Canada, call or text 988. Anywhere else, find a free helpline for "
+    "your country at findahelpline.com. Please try me again in a moment. 💜"
 )
 
 
