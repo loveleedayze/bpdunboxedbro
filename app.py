@@ -48,8 +48,8 @@ def chat():
         )
         reply = "".join(b.text for b in result.content if b.type == "text")
         return jsonify({"response": reply or FALLBACK})
-    except anthropic.APIError as e:
-        app.logger.error("Anthropic API error: %s", e)
+    except Exception as e:  # never leave someone with a blank error
+        app.logger.error("Chat error: %s", e)
         return jsonify({"response": FALLBACK}), 502
 
 
